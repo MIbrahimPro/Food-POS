@@ -1,0 +1,33 @@
+.panel-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+
+.left-panel {
+  width: calc(100% - 350px);
+  flex-shrink: 1;
+
+}
+
+.right-panel {
+  display: block;
+  width: 350px;
+
+}
+
+
+@media (max-width: 850px) {
+
+  .left-panel {
+    width: calc(100%);
+
+  }
+
+  .right-panel {
+    display: none;
+  }
+
+}

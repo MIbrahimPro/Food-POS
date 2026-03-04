@@ -1,0 +1,266 @@
+/* src/components/Navbar.css */
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    background-color: #f2f2f2;
+    color: #3e3e3e;
+    position: relative;
+    padding: 10px;
+    height: 74px;
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 500;
+}
+
+.nav-item {
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 0% 9px;
+
+    transition: all 0.15s ease-out;
+}
+
+.nav-item:hover {
+    transform: scale(105%);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+.nav-item:nth-child(3){
+    margin-left: auto;
+}
+
+.nav-item img {
+    height: 30px;
+}
+
+
+@media (max-width: 700px) {
+    .nav-item:nth-child(3){
+        display: none;
+    }
+    .nav-item:nth-child(4){
+        display: none;
+    }
+}
+
+
+
+
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -400px;
+    width: 400px;
+    max-width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: all 0.15s ease-out;
+    z-index: 1500;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sb-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    background-color: #f2f2f2;
+    color: #3e3e3e;
+    padding: 10px;
+    height: 74px;
+    width: 100%;
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 37px 37px;
+}
+.sb-top > div{
+    height: 54px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+
+    background-color: #ffcece;
+    border-radius: 27px;
+    padding: 0% 9px;
+
+    transition: all 0.15s ease-out;
+}
+.sb-top > div:hover {
+    transform: scale(105%);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+.sb-top > div > img{
+    height: 36px;
+}
+.sb-top > .sb-accinfo{
+    padding-right: 15px;
+    padding-left: 4px;
+    flex-grow: 1;
+    background-color: #ffffff;
+}
+.sb-top > .sb-accinfo > img{
+    height: 46px;
+    border-radius: 23px;
+}
+.sb-top > .sb-accinfo > p{
+    line-height: 15px;
+    font-size: 18px;
+}
+.sb-top > .sb-accinfo > p > .sb-role{
+    font-size: 12px;
+    line-height: 2px;
+    color: #747474;
+}
+
+
+
+.sb-data{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.sb-data >div{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding: 0% 20px;
+    transition: all 0.15s ease-out;
+}
+.sb-data >div:hover{
+    background-color: #dbdada;
+    font-weight: 700;
+}
+.sb-data >div >div{
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    background-color: #eeeeee;
+    border-radius: 20px;
+    padding: 0% 9px;
+}
+
+.sb-data >div >div >img{
+    height: 22px;
+}
+.sb-data >div >p{
+    font-size: 18px;
+}
+
+.sb-data >.sb-data-active{
+    /* background-color: rgba(26, 115, 232, 0.2);
+    color: rgb(26, 115, 232); */
+    background-color:#fbb13b44 ;
+    color:#F15A24 ;
+    font-weight: 500;
+}
+.sb-data >.sb-data-active:hover{
+    /* background-color: rgba(26, 115, 232, 0.4); */
+    background-color: #fbb13b71;
+    font-weight: 700;
+
+}
+/* .sb-data >.sb-data-active >div{
+    background-color: rgba(26, 115, 232, 0.1);
+} */
+
+
+.sb-bottom{
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    color: #3e3e3e;
+    padding: 10px;
+    height: 74px;
+    box-shadow: 0 -7px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 37px 37px 0px 0px;
+}
+.sb-bottom-item{
+    height: 54px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #ffffff;
+    border-radius: 27px;
+    padding: 0% 9px;
+
+    flex-grow: 1;
+
+    transition: all 0.15s ease-out;
+}
+.sb-bottom-item >div{
+    background-color: red;
+    height: 46px;
+    border-radius: 50%;
+    padding: 6px;
+    padding-left:8px;
+    padding-right:4px;
+}
+.sb-bottom-item >div img{
+    height: 34px;
+}
+.sb-bottom-item p {
+    font-size: 18px;
+    padding-left: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Overlay with Blur */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    transition: opacity 0.15s ease-out;
+}
